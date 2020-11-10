@@ -8,7 +8,7 @@ TLSR825x programmator via COM port
 Flash programming for TLSR825x chips using only a COM port.
 (modules TB-02, TB-04, ...)
 
-![SCH](https://github.com/pvvx/TlsrComProg825x/blob/master/Doc/img/schematic.gif)
+![SCH](https://github.com/pvvx/TlsrComProg825x/blob/main/Doc/img/schematic.gif)
 
     Usage: TlsrComProg [-h] [--port PORT] [--tact TACT] [--fldr FLDR]
                        [--baud BAUD]
