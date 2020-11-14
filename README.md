@@ -1,7 +1,7 @@
 # TlsrComProg
 TLSR825x programmator via COM port
 
-(!) Limitations: Only TLSR825x Chip Used!
+(!) Limitations: Only TLSR8251, TLSR8253, TLSR8258 Chip Used!
 
 ### Telink SWIRE simulation on a COM port + COM Flasher.
 
@@ -49,7 +49,7 @@ Load <floader.bin> to 0x40000...
 Bin bytes writen: 1912
 CPU go Start...
 ------------------------------------------------
-ChipID: 0x5562 (TLSR8251), Floader ver: 1.0
+ChipID: 0x5562 (TLSR8253), Floader ver: 1.0
 Flash JEDEC ID: c86013, Size: 512 kbytes
 ------------------------------------------------
 Inputfile: AiThinkerAT.bin
@@ -70,7 +70,7 @@ Load <floader.bin> to 0x40000...
 Bin bytes writen: 1912
 CPU go Start...
 ------------------------------------------------
-ChipID: 0x5562 (TLSR8251), Floader ver: 1.0
+ChipID: 0x5562 (TLSR8253), Floader ver: 1.0
 Flash JEDEC ID: c86013, Size: 512 kbytes
 ------------------------------------------------
 Read Flash from 0x000000 to 0x080000...
@@ -91,7 +91,7 @@ Load <floader.bin> to 0x40000...
 Bin bytes writen: 1912
 CPU go Start...
 ------------------------------------------------
-ChipID: 0x5562 (TLSR8251), Floader ver: 1.0
+ChipID: 0x5562 (TLSR8253), Floader ver: 1.0
 Flash JEDEC ID: c86013, Size: 512 kbytes
 ------------------------------------------------
 Erase All Flash ...
@@ -99,7 +99,7 @@ Erase All Flash ...
 Done!
 ```
 
-[Examples of using (tlsr826x)](https://github.com/pvvx/TlsrComProg/tree/master/Doc)
+[Examples of using](https://github.com/pvvx/TlsrComProg825x/tree/master/Doc)
 
 [UartFloader Source Code](https://github.com/pvvx/TlsrComProg825x/tree/master/Uartfloader)
 

@@ -139,6 +139,7 @@ _attribute_ram_code_ void flash_write_sector(u32 addr, u32 len, u8 *buf) {
 	}
 }
 
+/*
 _attribute_ram_code_  void * memcpy (void * to, const void * from, size_t size) {
 	u8 * pto = (u8 *)to;
 	u8 * pfrom = (u8 *)from;
@@ -148,6 +149,7 @@ _attribute_ram_code_  void * memcpy (void * to, const void * from, size_t size) 
 	}
 	return to;
 }
+*/
 
 _attribute_ram_code_ int main (void) {
 	reg_irq_en = 0;

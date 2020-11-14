@@ -428,7 +428,7 @@ def main():
 			serialPort.close
 			sys.exit(10)
 		if cid == 0x5562:
-			chip = 'TLSR8251'
+			chip = 'TLSR8253'
 		else:	
 			chip = '?'
 		print('ChipID: 0x%04x (%s), Floader ver: %x.%x' % (cid, chip, (ver>>4)&0x0f, ver&0x0f))
