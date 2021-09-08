@@ -90,7 +90,7 @@ dma_uart_buf_t utxb;
 
 //_attribute_ram_code_
 inline void uart_init(void) {
-#if CHIP_TYPE == MCU_CORE_8251
+#if CHIP_TYPE == MCU_CORE_825x
 	// reg_uart_clk_div/reg_uart_ctrl0
 	REG_ADDR32(0x094) = MASK_VAL(FLD_UART_CLK_DIV, uartCLKdiv, FLD_UART_CLK_DIV_EN, 1)
 		|	((MASK_VAL( FLD_UART_BWPC, bwpc) // set bit width
@@ -156,7 +156,7 @@ _attribute_ram_code_ int main (void) {
 	// Open clk for MCU running
 	REG_ADDR32(0x60) = 0xff000000;
 	REG_ADDR16(0x64) = 0xffff;
-#if CHIP_TYPE == MCU_CORE_8251
+#if CHIP_TYPE == MCU_CORE_825x
 		analog_write(0x82,0x64);	//areg_clk_setting
 		analog_write(0x52,0x80);
 		analog_write(0x0b,0x38);

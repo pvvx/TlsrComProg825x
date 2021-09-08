@@ -12,9 +12,9 @@ extern "C" {
 #define MCU_CORE_8263 		5
 #define MCU_CORE_8261 		6
 #define MCU_CORE_8269 		7
-#define MCU_CORE_8251 		8
+#define MCU_CORE_825x 		8
 
-#define CHIP_TYPE MCU_CORE_8251
+#define CHIP_TYPE MCU_CORE_825x
 
 #define MCU_CORE_TYPE CHIP_TYPE
 
