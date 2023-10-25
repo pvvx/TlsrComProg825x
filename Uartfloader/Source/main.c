@@ -16,7 +16,7 @@
  * Calculator CRC-16/MODBUS: https://crccalc.com/
  */
 //-------------------------------
-#define VERSION_BCD 0x10 // 0x12 -> Ver 1.0
+#define VERSION_BCD 0x11 // 0x12 -> Ver 1.0
 //------------------------------- Init UART ---
 #define UART_BAUD 230400 // 115200 or 230400
 
@@ -321,6 +321,9 @@ _attribute_ram_code_ int main (void) {
 									break;
 								case 1:
 									REG_ADDR8(0x6f) = 0x20;   // mcu reboot
+									break;
+								case 2:
+									flash_write_status(urxb.pkt.head.addrh);
 									break;
 								}
 								break;

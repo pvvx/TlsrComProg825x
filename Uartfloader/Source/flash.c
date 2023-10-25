@@ -176,3 +176,20 @@ _attribute_ram_code_ void flash_get_jedec_id(u8 *p){
 }
 #endif
 
+_attribute_ram_code_ void flash_write_status(u32 var){
+#if USE_IRQ_SAVE
+	u8 r = irq_disable();
+#endif
+
+	WATCHDOG_CLEAR;  //in case of watchdog timeout
+
+	flash_send_cmd(FLASH_WRITE_ENABLE_CMD);
+	flash_send_cmd(FLASH_WRITE_STATUS_CMD);
+	mspi_write((u8)var);   //8 bit status
+	mspi_wait();
+	mspi_high();
+	flash_wait_done();
+#if USE_IRQ_SAVE
+	irq_restore(r);
+#endif
+}

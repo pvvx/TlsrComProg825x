@@ -2,6 +2,7 @@
 #pragma once
 
 enum{
+	FLASH_WRITE_STATUS_CMD	=	0x01,
 	FLASH_WRITE_CMD			=	0x02,
 	FLASH_READ_CMD			=	0x03,
 	FLASH_WRITE_ENABLE_CMD 	= 	0x06,
@@ -14,6 +15,7 @@ enum{
 	FLASH_GET_JEDEC_ID		=	0x9F,
 };
 
+_attribute_ram_code_ void flash_write_status(u32 var);
 _attribute_ram_code_ void flash_erase_sector(u32 addr);
 _attribute_ram_code_ void flash_write_page(u32 addr, u32 len, u8 *buf);
 _attribute_ram_code_ void flash_read_page(u32 addr, u32 len, u8 *buf);

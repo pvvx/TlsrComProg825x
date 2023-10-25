@@ -30,7 +30,7 @@ Flash programming for TLSR825x chips using only a COM port.
       --tact TACT, -t TACT  Time Activation ms (0-off, default: 600 ms)
       --fldr FLDR, -f FLDR  Filename floader (default: floader.bin)
       --baud BAUD, -b BAUD  UART Baud Rate (default: 230400)
-    
+
 
 ------------
 
