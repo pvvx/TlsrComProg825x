@@ -334,7 +334,7 @@ def main():
 		#--------------------------------
 		# Open Floader
 		try:
-			stream = open(args.fldr, 'rb')
+			stream = open(args.fldr, "rb")
 			size = os.path.getsize(args.fldr)
 		except:
 			serialPort.close
@@ -495,11 +495,11 @@ def main():
 				sys.exit(11)
 		print('Inputfile: %s' % (args.filename))
 		try:
-			stream = open(args.filename, 'rb')
+			stream = open(args.filename, "rb")
 			size = os.path.getsize(args.filename)
 		except:
 			serialPort.close
-			print('Error: Not open input file <%s>!' % args.fldr)
+			print('Error: Not open input file <%s>!' % args.filename)
 			sys.exit(2)
 		if size < 1:
 			stream.close
