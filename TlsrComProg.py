@@ -552,7 +552,7 @@ def main():
 		if not EraseAllFlash(serialPort):
 			serialPort.close
 			sys.exit(7)
-	if args.rst or args.operation == 'rst':
+	if args.rst:
 		print('Reset module (RTS low)...')
 		serialPort.setDTR(True)
 		serialPort.setRTS(True)
